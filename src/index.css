@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@theme {
+    --font-family: 'rubik', sans-serif;
+    --color-primary: #00ADB5;
+    --color-background: #121212;
+    --color-secondary: #F8F9FA;
+    --color-text: #E0E0E0;
+    --color-highlight:#FF014F;
+}
+@layer components {
+    .btnicon {
+                width: 4rem;
+                height: 4rem;
+                background-color: rgba(248, 245, 245, 0.959);
+                color: var(--color-primary);
+                font-size: 1.25rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.375rem;
+                box-shadow: var(--shadow-shadowOne);
+                transition: all 0.3s;
+                cursor: pointer;
+        }
+        .btnicon:hover {
+                background-color: rgba(248, 245, 245, 0.959);
+                transform: translateY(-0.25rem);
+                color: var(--color-highlight);
+    }
+}
