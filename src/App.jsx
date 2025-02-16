@@ -1,3 +1,15 @@
+import React from 'react'
+import{BrowserRouter as Router, Route,Routes} from 'react-router-dom'
+// import './App.css'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Services from './components/Services'
+import Team from './components/Team'
+import Portfolio from './components/Portfolio'
+import About from './components/About '
+import Contact from './components/Contact'
+import Quote from './components/Quote'
+import ChatAssistant from './components/ChatAssistant'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import './App.css'
 import Navbar from "./components/Navbar";

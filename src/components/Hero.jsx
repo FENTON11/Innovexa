@@ -35,17 +35,17 @@ function Hero() {
       </div>
 
       {/* Footer Section */}
-      <div className='max-w-6xl w-full md:flex-row items-center mt-12'>
-        <div className='flex flex-col md:flex-row justify-between items-center w-full'>
+      <div className="max-w-6xl w-full md:flex-row items-center mt-12">
+        <div className="flex flex-col md:flex-row justify-between items-center w-full">
           {/* Left Side - Social Media Icons */}
-          <div className='flex gap-6'>
-            <span className='btnicon'>
+          <div className="flex gap-6">
+            <span className="btnicon">
               <FaFacebookF />
             </span>
-            <span className='btnicon'>
+            <span className="btnicon">
               <FaTwitter />
             </span>
-            <span className='btnicon'>
+            <span className="btnicon">
               <FaLinkedinIn />
             </span>
           </div>

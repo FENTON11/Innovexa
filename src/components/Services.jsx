@@ -2,12 +2,11 @@ import { services } from "../data";
 import Card from "../components/Card";
 function Services() {
   return (
-    <section className='bg-background min-h-screen text-text py-20 px-6 overflow-hidden'>
-      <div className='max-w-6xl mx-auto text-center'>
-        <h2 className='text-4xl font-bold text-primary mb-8'>Our Services</h2>
-        <p className='text-secondary text-lg mb-12'>
-          We specialize in cutting-edge digital solutions tailored to your
-          needs.
+    <section className="bg-background min-h-screen text-text py-20 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-primary mb-8">Our Services</h2>
+        <p className="text-secondary text-lg mb-12">
+          We specialize in cutting-edge digital solutions tailored to your needs.
         </p>
 
         {/* Services Grid */}
