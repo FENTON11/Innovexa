@@ -25,8 +25,9 @@ function Services() {
               </h3>
             </div>
             <p className='text-gray-300 mt-3'>
-              We build intuitive, high-performance mobile applications for iOS
-              and Android.
+              Craft seamless, high-performance Android apps tailored to your
+              unique needs. From concept to launch, we bring your ideas to life
+              on the world&apos;s most popular mobile platform..
             </p>
           </div>
           <div className='bg-gray-800 p-8 rounded-2xl shadow-lg transition transform hover:scale-105 flex flex-col gap-2'>
@@ -37,8 +38,9 @@ function Services() {
               </h3>
             </div>
             <p className='text-gray-300 mt-3'>
-              We build intuitive, high-performance mobile applications for iOS
-              and Android.
+              Build once, deploy everywhere. Our hybrid apps offer
+              cross-platform compatibility and a native-like experience, saving
+              you time and resources.
             </p>
           </div>
           <div className='bg-gray-800 p-8 rounded-2xl shadow-lg transition transform hover:scale-105 flex flex-col gap-2'>
@@ -49,8 +51,9 @@ function Services() {
               </h3>
             </div>
             <p className='text-gray-300 mt-3'>
-              We build intuitive, high-performance mobile applications for iOS
-              and Android.
+              Create stunning, user-centric designs that captivate and engage.
+              Our UI/UX experts ensure your app or website is intuitive,
+              beautiful, and a joy to use..
             </p>
           </div>
 
@@ -63,8 +66,9 @@ function Services() {
               </h3>
             </div>
             <p className='text-gray-300 mt-3'>
-              We build intuitive, high-performance mobile applications for iOS
-              and Android.
+              Transform your designs into responsive, interactive web
+              experiences. We use the latest technologies to deliver fast,
+              visually appealing front-end solutions..
             </p>
           </div>
           <div className='bg-gray-800 p-8 rounded-2xl shadow-lg transition transform hover:scale-105 flex flex-col gap-2'>
@@ -75,8 +79,9 @@ function Services() {
               </h3>
             </div>
             <p className='text-gray-300 mt-3'>
-              We build intuitive, high-performance mobile applications for iOS
-              and Android.
+              Power your applications with robust, scalable backend solutions.
+              Our experts handle databases, servers, and APIs to ensure smooth,
+              reliable performance.
             </p>
           </div>
           <div className='bg-gray-800 p-8 rounded-2xl shadow-lg transition transform hover:scale-105 flex flex-col gap-2'>
@@ -87,8 +92,9 @@ function Services() {
               </h3>
             </div>
             <p className='text-gray-300 mt-3'>
-              We build intuitive, high-performance mobile applications for iOS
-              and Android.
+              Ensure your software is bug-free and reliable with comprehensive
+              unit testing. We identify and fix issues early, saving you time
+              and money.
             </p>
           </div>
           <div className='bg-gray-800 p-8 rounded-2xl shadow-lg transition transform hover:scale-105 flex flex-col gap-2'>
@@ -99,8 +105,9 @@ function Services() {
               </h3>
             </div>
             <p className='text-gray-300 mt-3'>
-              We build intuitive, high-performance mobile applications for iOS
-              and Android.
+              Boost your online visibility and drive organic traffic with expert
+              SEO strategies. We optimize your content and structure to rank
+              higher on search engines.
             </p>
           </div>
           <div className='bg-gray-800 p-8 rounded-2xl shadow-lg transition transform hover:scale-105 flex flex-col gap-2'>
@@ -111,8 +118,9 @@ function Services() {
               </h3>
             </div>
             <p className='text-gray-300 mt-3'>
-              We build intuitive, high-performance mobile applications for iOS
-              and Android.
+              Keep your software running smoothly with our expert bug fixing and
+              debugging services. We quickly identify and resolve issues to
+              minimize downtime.
             </p>
           </div>
         </div>
