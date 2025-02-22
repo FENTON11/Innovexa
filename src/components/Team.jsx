@@ -1,14 +1,15 @@
 import godie from "../assets/godie.png";
+import fenton from "../assets/fenton.png";
 function Team() {
   const teamMembers = [
     {
       name: "Fenton Mwangi",
       role: "Chief Executive Officer",
-      image: "/assets/ceo.jpg",
+      image: fenton,
     },
     {
       name: "Godfrey Maina",
-      role: "Chief Operating Officer",
+      role: "Senior Lead Developer",
       image: godie,
     },
   ];

@@ -30,7 +30,6 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  
 }
 
 @keyframes logo-spin {
@@ -47,6 +46,3 @@ body {
     animation: logo-spin infinite 20s linear;
   }
 }
-
-
-

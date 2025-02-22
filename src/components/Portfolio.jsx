@@ -1,28 +1,40 @@
+import exccelent from "../assets/excellent.png";
+import fresh from "../assets/fresh-grub.png";
+import inferno from "../assets/inferno.png";
+import eden from "../assets/eden.png";
 function Portfolio() {
   // Sample projects (Replace with actual project details)
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Inferno E-Commerce Platform",
       description:
-        "A fully functional online shoe store built using the MERN stack.",
-      image: "/assets/ecommerce-project.jpg", // Replace with actual image path
+        "Inferno is a stylish boutique app offering a curated selection of fashion and accessories for trend-conscious shoppers. With its sleek design and user-friendly interface, Inferno provides a seamless shopping experience, featuring exclusive collections, personalized recommendations, and easy ordering. Whether you're looking for chic clothing, footwear, or unique accessories, Inferno brings the latest fashion trends right to your fingertips.",
+      image: inferno, // Replace with actual image path
       link: "#",
       completed: false,
     },
     {
-      title: "CampusCrib",
+      title: "Excellent Health Care",
       description:
-        "A housing platform for international students to find accommodation near universities.",
-      image: "/assets/campuscrib.jpg", // Replace with actual image path
-      link: "#",
+        "Excellent Health Care is a comprehensive training system designed to enhance the skills and knowledge of healthcare professionals. It focuses on delivering high-quality education in areas such as patient care, medical procedures, healthcare management, and communication. The system aims to improve the effectiveness of healthcare delivery by offering both theoretical and practical learning experiences, ensuring that practitioners are well-equipped to meet the demands of modern healthcare environments.",
+      image: exccelent, // Replace with actual image path
+      link: "https://excellent-health-care.vercel.app",
       completed: true,
     },
     {
-      title: "Business Website",
+      title: "Fresh Grub Food ordering app",
       description:
-        "A sleek and modern business website designed for a client using React.js and TailwindCSS.",
-      image: "/assets/business-website.jpg", // Replace with actual image path
-      link: "#",
+        "Fresh Grub Kenya is a user-friendly food delivery app that connects customers with local restaurants and food vendors across Kenya. The app offers a wide variety of fresh, delicious meals, allowing users to browse menus, place orders, and have food delivered right to their doorstep. With a focus on convenience and quality, Fresh Grub Kenya provides a seamless and reliable way for people to enjoy tasty meals from their favorite eateries",
+      image: fresh, // Replace with actual image path
+      link: "https://fresh-grub-kenya.onrender.com",
+      completed: true,
+    },
+    {
+      title: "Eden- real estate app",
+      description:
+        "Eden is a comprehensive real estate app that simplifies the process of buying, selling, and renting properties. With an intuitive interface, Eden allows users to browse listings, view detailed property information, and connect directly with agents or sellers. Whether you're looking for a new home, office space, or investment opportunity, Eden offers a seamless experience to help you find your ideal property.",
+      image: eden, // Replace with actual image path
+      link: "https://eden-estate-front.onrender.com",
       completed: true,
     },
   ];
@@ -43,18 +55,30 @@ function Portfolio() {
             <img
               src={project.image}
               alt={project.title}
-              className='w-full h-56 object-cover rounded-md mb-4'
+              className='w-full md:h-[250] object-cover rounded-md mb-4'
             />
             <h2 className='text-2xl font-semibold text-highlight'>
               {project.title}
             </h2>
-            <p className='text-lg text-primary mb-4'>{project.description}</p>
-            <a
-              href={project.link}
-              className='bg-highlight text-white px-4 py-2 rounded-md inline-block hover:bg-primary transition'
-            >
-              View Project
-            </a>
+            <p className='text-lg text-primary mb-4 line-clamp-3'>
+              {project.description}
+            </p>
+            {project.completed ? (
+              <a
+                target='_blanck'
+                href={project.link}
+                className='bg-highlight text-white px-4 py-2 rounded-md inline-block hover:bg-primary transition'
+              >
+                View Project
+              </a>
+            ) : (
+              <div
+                href={project.link}
+                className='bg-gray-500 text-white px-4 py-2 rounded-md inline-block  cursor-not-allowed transition'
+              >
+                under development
+              </div>
+            )}
           </div>
         ))}
       </div>
