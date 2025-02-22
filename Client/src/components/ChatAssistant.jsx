@@ -107,7 +107,6 @@ import { useState, useEffect } from "react";
 import { FaCommentDots } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
-
 const ChatAssistant = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showText, setShowText] = useState(false);
@@ -118,7 +117,6 @@ const ChatAssistant = () => {
     },
   ]);
   const [input, setInput] = useState("");
-
   // Show "Need some help?" after 2 minutes
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -126,16 +124,13 @@ const ChatAssistant = () => {
     }, 120000); // 120,000ms = 2 minutes
     return () => clearTimeout(timer);
   }, []);
-
   const handleSend = async () => {
     if (!input.trim()) return;
-
     const userMessage = { sender: "user", text: input };
     setMessages([...messages, userMessage]);
-    setInput("");
-
+    setInput("");    
     try {
-      const response = await axios.post("http://localhost:5000/chat", {
+      const response = await axios.post(`${import.meta.env.VITE_SERVER_URL}/chat`, {
         message: input,
       });
 
