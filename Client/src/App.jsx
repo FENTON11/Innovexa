@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Quote from "./components/Quote";
 import ChatAssistant from "./components/ChatAssistant";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/quote' element={<Quote />} />
       </Routes>
+      <Footer />
       <ChatAssistant /> {/* Add Chat Assistant */}
     </Router>
   );

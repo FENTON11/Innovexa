@@ -1,89 +1,192 @@
-import exccelent from "../assets/excellent.png";
-import fresh from "../assets/fresh-grub.png";
-import inferno from "../assets/inferno.png";
-import eden from "../assets/eden.png";
-function Portfolio() {
-  // Sample projects (Replace with actual project details)
-  const projects = [
-    {
-      title: "Inferno E-Commerce Platform",
-      description:
-        "Inferno is a stylish boutique app offering a curated selection of fashion and accessories for trend-conscious shoppers. With its sleek design and user-friendly interface, Inferno provides a seamless shopping experience, featuring exclusive collections, personalized recommendations, and easy ordering. Whether you're looking for chic clothing, footwear, or unique accessories, Inferno brings the latest fashion trends right to your fingertips.",
-      image: inferno, // Replace with actual image path
-      link: "#",
-      completed: false,
+import { motion } from "framer-motion";
+import { portfolios } from "../data";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useState } from "react";
+const varients = {
+  initial: {
+    y: 300,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
     },
-    {
-      title: "Excellent Health Care",
-      description:
-        "Excellent Health Care is a comprehensive training system designed to enhance the skills and knowledge of healthcare professionals. It focuses on delivering high-quality education in areas such as patient care, medical procedures, healthcare management, and communication. The system aims to improve the effectiveness of healthcare delivery by offering both theoretical and practical learning experiences, ensuring that practitioners are well-equipped to meet the demands of modern healthcare environments.",
-      image: exccelent, // Replace with actual image path
-      link: "https://excellent-health-care.vercel.app",
-      completed: true,
-    },
-    {
-      title: "Fresh Grub Food ordering app",
-      description:
-        "Fresh Grub Kenya is a user-friendly food delivery app that connects customers with local restaurants and food vendors across Kenya. The app offers a wide variety of fresh, delicious meals, allowing users to browse menus, place orders, and have food delivered right to their doorstep. With a focus on convenience and quality, Fresh Grub Kenya provides a seamless and reliable way for people to enjoy tasty meals from their favorite eateries",
-      image: fresh, // Replace with actual image path
-      link: "https://fresh-grub-kenya.onrender.com",
-      completed: true,
-    },
-    {
-      title: "Eden- real estate app",
-      description:
-        "Eden is a comprehensive real estate app that simplifies the process of buying, selling, and renting properties. With an intuitive interface, Eden allows users to browse listings, view detailed property information, and connect directly with agents or sellers. Whether you're looking for a new home, office space, or investment opportunity, Eden offers a seamless experience to help you find your ideal property.",
-      image: eden, // Replace with actual image path
-      link: "https://eden-estate-front.onrender.com",
-      completed: true,
-    },
-  ];
+  },
+};
+const Portfolio = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPortfolioImages, setSelectedPortfolioImages] = useState([]);
 
+  const handleCarouselClick = (images) => {
+    setSelectedPortfolioImages(images);
+    setIsModalOpen(true);
+  };
   return (
-    <section className='bg-background text-text min-h-screen flex flex-col items-center px-6 py-12'>
-      <h1 className='text-4xl font-bold text-primary mb-6'>Our Portfolio</h1>
-      <p className='text-lg text-secondary mb-8 text-center'>
-        Explore some of the amazing projects we have built.
-      </p>
+    <div className='relative'>
+      {/* Progress Bar */}
+      {/* <div className='sticky top-0 left-0 pt-12 text-center text-orange-500 text-3xl md:text-xl bg-gray-800 w-full z-10'>
+        <h1>Featured Works</h1>
+        <div className='progressBar h-2 bg-white mt-4 w-full'></div>
+      </div> */}
 
-      <div className='max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className='bg-gray-800 p-6 rounded-lg shadow-lg text-center transition transform hover:scale-105'
+      {/* Portfolio Items */}
+      <div className='mt-24 md:mt-7 mb-10  flex flex-col gap-4'>
+        {portfolios.map((item) => (
+          <section
+            key={item.id}
+            className=' flex gap-2 items-center overflow-hidden md:min-h-[90vh]'
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className='w-full md:h-[250] object-cover rounded-md mb-4'
-            />
-            <h2 className='text-2xl font-semibold text-highlight'>
-              {project.title}
-            </h2>
-            <p className='text-lg text-primary mb-4 line-clamp-3'>
-              {project.description}
-            </p>
-            {project.completed ? (
-              <a
-                target='_blanck'
-                href={project.link}
-                className='bg-highlight text-white px-4 py-2 rounded-md inline-block hover:bg-primary transition'
-              >
-                View Project
-              </a>
-            ) : (
-              <div
-                href={project.link}
-                className='bg-gray-500 text-white px-4 py-2 rounded-md inline-block  cursor-not-allowed transition'
-              >
-                under development
+            <motion.div
+              variants={varients}
+              initial='initial'
+              whileInView='animate'
+              className='container mx-auto px-4'
+            >
+              <div className='flex flex-col md:flex-row items-center justify-center gap-12'>
+                <div
+                  className='flex-1 h-[50%] overflow-hidden md:p-4'
+                  onClick={() => handleCarouselClick(item.images)}
+                >
+                  <Carousel
+                    infiniteLoop
+                    autoPlay
+                    showThumbs={false}
+                    className=' w-full h-full'
+                  >
+                    {item.images.map((img, index) => (
+                      <img
+                        key={index}
+                        src={img}
+                        alt={item.title}
+                        className='w-full h-full object-contain md:object-cover rounded-md'
+                      />
+                    ))}
+                  </Carousel>
+                </div>
+                <motion.div
+                  variants={varients}
+                  className='flex-1 flex flex-col gap-6'
+                >
+                  <motion.h2
+                    variants={varients}
+                    className=' text-2xl sm:text-3xl font-bold xl:text-4xl text-center md:text-left bg-app capitalize'
+                  >
+                    {item.title}
+                  </motion.h2>
+                  <motion.p
+                    variants={varients}
+                    className='text-base md:text-lg text-justify md:text-left md:line-clamp-6 lg:line-clamp-none'
+                  >
+                    {item.desc}
+                  </motion.p>
+                  <motion.h1 variants={varients} className=' font-bold bg-app'>
+                    Technologies
+                  </motion.h1>
+                  <motion.div
+                    variants={varients}
+                    className='flex justify-between gap-4 items-start'
+                  >
+                    <motion.div
+                      variants={varients}
+                      className='flex gap-4 items-center flex-wrap'
+                    >
+                      {item.technologies.map((item, index) => (
+                        <motion.div variants={varients} key={index}>
+                          {/* <Tooltip
+                              arrow
+                              title={item.name}
+                            > */}
+                          <img
+                            alt={item.name}
+                            src={item.image}
+                            width={20}
+                            height={20}
+                            className=' object-cover rounded-full cursor-pointer'
+                          />
+                          {/* </Tooltip> */}
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                    {item.completed ? (
+                      <motion.a
+                        variants={varients}
+                        href={item.link}
+                        target='_blank'
+                      >
+                        <motion.button className='bg-primary text-white rounded-lg py-2 px-8  cursor-pointer transition-all hover:bg-highlight duration-150 hover:scale-105'>
+                          See Demo
+                        </motion.button>
+                      </motion.a>
+                    ) : (
+                      <motion.button
+                        variants={varients}
+                        className='bg-gray-500 text-white rounded-lg py-2 px-8  cursor-not-allowed'
+                      >
+                        under development
+                      </motion.button>
+                    )}
+                  </motion.div>
+                  <motion.div
+                    variants={varients}
+                    className='flex items-center justify-between'
+                  >
+                    {/* <motion.div variants={varients}>
+                      {item.showGithub ? (
+                        <button>
+                          <FaGithub className=' text-4xl  text-text_main' />
+                        </button>
+                      ) : (
+                        <div className=' line-through  p-2'>
+                          <FaGithub />
+                        </div>
+                      )}
+                    </motion.div> */}
+                  </motion.div>
+                </motion.div>
               </div>
-            )}
-          </div>
+            </motion.div>
+          </section>
         ))}
       </div>
-    </section>
+      {isModalOpen && (
+        <div
+          className='fixed inset-0 bg-black/25 bg-opacity-90 z-50 flex items-center gap-4 justify-center p-4'
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className='relative max-w-[1000px] bg-white p-4 rounded-lg w-full'
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className='absolute -top-10 cursor-pointer right-0 text-white text-4xl z-50 hover:text-gray-300'
+              onClick={() => setIsModalOpen(false)}
+            >
+              &times;
+            </button>
+            <Carousel
+              infiniteLoop
+              showThumbs={false}
+              className='w-full h-full modal-carousel'
+              selectedItem={0}
+            >
+              {selectedPortfolioImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  className='w-full h-[80vh] object-cover'
+                  alt={`Enlarged view ${index + 1}`}
+                />
+              ))}
+            </Carousel>
+          </div>
+        </div>
+      )}
+    </div>
   );
-}
+};
 
 export default Portfolio;
