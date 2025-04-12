@@ -42,6 +42,49 @@ body {
     transform: translateY(-0.25rem);
     color: var(--color-highlight);
   }
+  .dots::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    text-align: left;
+    animation: dots 1s steps(3, end) infinite;
+  }
+
+  @keyframes dots {
+    0%,
+    20% {
+      content: "";
+    }
+    40% {
+      content: ".";
+    }
+    60% {
+      content: "..";
+    }
+    80%,
+    100% {
+      content: "...";
+    }
+  }
+  .btnicon {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(248, 245, 245, 0.959);
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    box-shadow: var(--shadow-shadowOne);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .btnicon:hover {
+    background-color: rgba(248, 245, 245, 0.959);
+    transform: translateY(-0.25rem);
+    color: var(--color-highlight);
+  }
 }
 .custom-shape-divider-top-1744401648 {
   position: absolute;
