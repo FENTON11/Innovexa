@@ -19,6 +19,13 @@ function Services() {
             >
               <div className=' p-4'>
                 <Card index={index}>
+                  <div>
+                    <img
+                      src={service.image}
+                      className=' w-full h-40 rounded-2xl object-cover'
+                      alt=''
+                    />
+                  </div>
                   <div className='flex items-center gap-2'>
                     <service.icon className='text-3xl text-highlight' />
                     <h3 className='text-2xl font-semibold text-white'>

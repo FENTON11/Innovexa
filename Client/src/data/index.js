@@ -35,6 +35,7 @@ import { FaBrush } from "react-icons/fa6";
 import { IoMdBug } from "react-icons/io";
 import { FaServer } from "react-icons/fa";
 import { TbTestPipe } from "react-icons/tb";
+import ui from "../assets/ui.jpg";
 
 export const portfolios = [
   {
@@ -183,6 +184,7 @@ export const services = [
     id: 1,
     icon: FaMobileAlt,
     title: "Android App Development",
+    image: ui,
     description: `We specialize in building robust and responsive Android applications tailored to your business needs. From sleek interfaces to efficient performance, our development process ensures that your app is optimized for both speed and scalability on Android devices.
 
 Whether you're launching a brand-new idea or revamping an existing app, we provide end-to-end development — from planning and UI/UX design to deployment and maintenance. We ensure compatibility across devices and adhere to best practices to deliver a seamless user experience.`,
@@ -190,6 +192,7 @@ Whether you're launching a brand-new idea or revamping an existing app, we provi
   {
     id: 2,
     icon: FaMobileAlt,
+    image: ui,
     title: "Hybrid Mobile App Development",
     description: `Our hybrid app development services allow you to launch your product across multiple platforms with a single codebase. Using modern frameworks, we create apps that feel and perform like native apps on both Android and iOS.
 
@@ -198,6 +201,7 @@ This cross-platform approach saves time and reduces development costs while ensu
   {
     id: 3,
     icon: FaBrush,
+    image: ui,
     title: "UI/UX Design",
     description: `Design is more than just aesthetics — it’s about creating intuitive, enjoyable experiences. Our UI/UX design team crafts interfaces that are not only visually appealing but also user-focused and functional.
 
@@ -206,6 +210,7 @@ We conduct thorough research to understand your users’ behavior and pain point
   {
     id: 4,
     icon: FaLaptopCode,
+    image: ui,
     title: "Front End Development",
     description: `We bring your designs to life through clean, responsive, and interactive front-end development. Our team leverages modern frameworks and technologies like React to ensure fast performance and a seamless user experience.
 
@@ -214,6 +219,7 @@ From landing pages to complex dashboards, we prioritize accessibility, scalabili
   {
     id: 5,
     icon: FaServer,
+    image: ui,
     title: "Backend End Development",
     description: `A powerful backend is the foundation of any high-performing app. We build secure, scalable, and maintainable server-side solutions that handle everything from data storage to user authentication and real-time features.
 
@@ -222,6 +228,7 @@ Whether it's RESTful APIs or complex business logic, our backend development ens
   {
     id: 6,
     icon: TbTestPipe,
+    image: ui,
     title: "Unit Testing",
     description: `Our unit testing services ensure that your application’s codebase remains stable, reliable, and easy to maintain. By testing components in isolation, we catch issues early in development before they become costly bugs.
 
@@ -230,6 +237,7 @@ We use industry-standard testing frameworks and tools to automate testing proces
   {
     id: 7,
     icon: TbSeo,
+    image: ui,
     title: "SEO Optimization",
     description: `Visibility is everything in today’s digital landscape. Our SEO optimization services help your website rank higher on search engines by improving technical performance, content relevance, and keyword targeting.
 
@@ -238,6 +246,7 @@ We conduct in-depth audits, implement on-page and off-page strategies, and conti
   {
     id: 8,
     icon: IoMdBug,
+    image: ui,
     title: "Bug Fixing and Debugging",
     description: `Even the best software can run into issues. Our bug fixing and debugging services are designed to quickly identify, diagnose, and resolve errors in your application to keep it running smoothly.
 
