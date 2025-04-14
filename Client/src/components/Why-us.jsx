@@ -28,7 +28,7 @@ const WhyUs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Why Choose Innovexa?
+          Why Choose VexaCode?
         </motion.h2>
 
         <motion.p
@@ -38,7 +38,7 @@ const WhyUs = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          At Innovexa, we blend innovation, expertise, and technology to deliver powerful web, mobile, and TV app solutions that help your business grow.
+          At VexaCode, we blend innovation, expertise, and technology to deliver powerful web, mobile, and TV app solutions that help your business grow.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
