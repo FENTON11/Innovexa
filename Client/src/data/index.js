@@ -1,18 +1,18 @@
 import react from "../assets/react.png";
-// import html from "../assets/html.png";
-// import css from "../assets/css.png";
-// import javascript from "../assets/javascript.jpeg";
+import html from "../assets/html.png";
+import css from "../assets/css.png";
+import javascript from "../assets/javascript.jpeg";
 import node from "../assets/node.png";
 import appwrite from "../assets/appwrite.jpeg";
-// import next from "../assets/next.jpeg";
+import next from "../assets/next.jpeg";
 import mongodb from "../assets/mongodb.jpeg";
 // import mysql from "../assets/mysql.jpeg";
 // import prisma from "../assets/prisma.jpeg";
-// import webSocket from "../assets/sockets.jpeg";
-// import reactNative from "../assets/react-native.jpeg";
+import webSocket from "../assets/sockets.jpeg";
+import reactNative from "../assets/react-native.jpeg";
 // import python from "../assets/python.jpeg";
 // import photoshop from "../assets/photoshop.png";
-// import figma from "../assets/figma.jpeg";
+import figma from "../assets/figma.jpeg";
 import freshGrub from "../assets/fresh grub.png";
 // import streamHaven from "../assets/strean-haven.png";
 import excellent from "../assets/excellent-health-care.png";
@@ -28,7 +28,7 @@ import styled from "../assets/styled.png";
 import redux from "../assets/redux.png";
 // import paypal from "../assets/paypal.png";
 // import sketch from "../assets/sketch.png";
-// import typedscript from "../assets/typedscript.jpeg";
+import typedscript from "../assets/typedscript.jpeg";
 import { FaMobileAlt, FaLaptopCode } from "react-icons/fa";
 import { TbSeo } from "react-icons/tb";
 import { FaBrush } from "react-icons/fa6";
@@ -183,73 +183,190 @@ export const services = [
   {
     id: 1,
     icon: FaMobileAlt,
-    title: "Android App Development",
     image: ui,
-    description: `We specialize in building robust and responsive Android applications tailored to your business needs. From sleek interfaces to efficient performance, our development process ensures that your app is optimized for both speed and scalability on Android devices.
-
-Whether you're launching a brand-new idea or revamping an existing app, we provide end-to-end development — from planning and UI/UX design to deployment and maintenance. We ensure compatibility across devices and adhere to best practices to deliver a seamless user experience.`,
+    title: "Android App Development",
+    description:
+      "We build fast, scalable Android apps tailored to your business goals, offering seamless user experiences across all devices.",
   },
   {
     id: 2,
     icon: FaMobileAlt,
     image: ui,
     title: "Hybrid Mobile App Development",
-    description: `Our hybrid app development services allow you to launch your product across multiple platforms with a single codebase. Using modern frameworks, we create apps that feel and perform like native apps on both Android and iOS.
-
-This cross-platform approach saves time and reduces development costs while ensuring a consistent user experience. Whether you're targeting broad user bases or need quick market entry, our hybrid solutions offer the flexibility and efficiency you need.`,
+    description:
+      "Cross-platform apps with native feel — one codebase, multiple platforms. Save time, cut costs, and launch faster.",
   },
   {
     id: 3,
     icon: FaBrush,
     image: ui,
     title: "UI/UX Design",
-    description: `Design is more than just aesthetics — it’s about creating intuitive, enjoyable experiences. Our UI/UX design team crafts interfaces that are not only visually appealing but also user-focused and functional.
-
-We conduct thorough research to understand your users’ behavior and pain points, allowing us to design wireframes and prototypes that truly connect with your audience. The result is a smooth, engaging experience that drives retention and satisfaction.`,
+    description:
+      "Visually stunning, user-friendly interfaces that boost engagement and usability. We focus on both form and function.",
   },
   {
     id: 4,
     icon: FaLaptopCode,
     image: ui,
     title: "Front End Development",
-    description: `We bring your designs to life through clean, responsive, and interactive front-end development. Our team leverages modern frameworks and technologies like React to ensure fast performance and a seamless user experience.
-
-From landing pages to complex dashboards, we prioritize accessibility, scalability, and maintainability. Whether you need animations, API integration, or component-based architecture, we deliver front-end solutions that work beautifully across devices.`,
+    description:
+      "Responsive, modern web interfaces built with the latest tech to ensure high performance and a smooth user journey.",
   },
   {
     id: 5,
     icon: FaServer,
     image: ui,
-    title: "Backend End Development",
-    description: `A powerful backend is the foundation of any high-performing app. We build secure, scalable, and maintainable server-side solutions that handle everything from data storage to user authentication and real-time features.
-
-Whether it's RESTful APIs or complex business logic, our backend development ensures your application runs smoothly and efficiently. We use technologies like Node.js, Express, and MongoDB to provide fast and reliable infrastructure for your digital products.`,
+    title: "Backend Development",
+    description:
+      "Scalable, secure server-side logic and API development to power fast, reliable, and data-driven applications.",
   },
   {
     id: 6,
     icon: TbTestPipe,
     image: ui,
     title: "Unit Testing",
-    description: `Our unit testing services ensure that your application’s codebase remains stable, reliable, and easy to maintain. By testing components in isolation, we catch issues early in development before they become costly bugs.
-
-We use industry-standard testing frameworks and tools to automate testing processes, increase coverage, and support CI/CD workflows. This proactive approach saves time in the long run and results in more robust, error-free software.`,
+    description:
+      "Reliable code through automated unit testing. We prevent bugs early and ensure long-term code stability and quality.",
   },
   {
     id: 7,
     icon: TbSeo,
     image: ui,
     title: "SEO Optimization",
-    description: `Visibility is everything in today’s digital landscape. Our SEO optimization services help your website rank higher on search engines by improving technical performance, content relevance, and keyword targeting.
-
-We conduct in-depth audits, implement on-page and off-page strategies, and continuously monitor results. Whether you're a local business or global brand, we help drive organic traffic and increase your reach online.`,
+    description:
+      "Boost your visibility with smart SEO strategies. We help your site rank higher and attract organic traffic efficiently.",
   },
   {
     id: 8,
     icon: IoMdBug,
     image: ui,
-    title: "Bug Fixing and Debugging",
-    description: `Even the best software can run into issues. Our bug fixing and debugging services are designed to quickly identify, diagnose, and resolve errors in your application to keep it running smoothly.
+    title: "Bug Fixing & Debugging",
+    description:
+      "We quickly identify and resolve bugs to keep your app stable, functional, and ready for a smooth user experience.",
+  },
+];
+export const technologies = [
+  {
+    title: "Frontend Fundamentals",
+    technologies: [
+      {
+        id: 1,
+        name: "HTML5",
+        image: html,
+        description:
+          "The core markup language for creating web pages and applications.",
+        level: 95,
+      },
+      {
+        id: 2,
+        name: "CSS3",
+        image: css,
+        description:
+          "Stylesheet language for designing responsive and animated interfaces.",
+        level: 90,
+      },
+      {
+        id: 3,
+        name: "JavaScript",
+        image: javascript,
+        description:
+          "Versatile programming language for interactive web experiences.",
+        level: 85,
+      },
+    ],
+  },
+  {
+    title: "Frontend Frameworks",
+    technologies: [
+      {
+        id: 4,
+        name: "React",
+        image: react,
+        description:
+          "Component-based library for building dynamic UIs with virtual DOM.",
+        level: 90,
+      },
+      {
+        id: 5,
+        name: "Next.js",
+        image: next,
+        description:
+          "React framework for server-side rendering and static websites.",
+        level: 80,
+      },
+      {
+        id: 6,
+        name: "TypeScript",
+        image: typedscript,
+        description:
+          "Typed JavaScript superset for scalable application development.",
+        level: 75,
+      },
+      {
+        id: 7,
+        name: "Redux",
+        image: redux,
+        description: "Predictable state container for JavaScript applications.",
+        level: 85,
+      },
+    ],
+  },
+  {
+    title: "Backend Technologies",
+    technologies: [
+      {
+        id: 8,
+        name: "Node.js",
+        image: node,
+        description:
+          "JavaScript runtime for building scalable server-side applications.",
+        level: 85,
+      },
+      {
+        id: 9,
+        name: "Express.js",
+        image: express,
+        description:
+          "Minimalist web framework for Node.js with robust features.",
+        level: 80,
+      },
+      {
+        id: 10,
+        name: "WebSockets",
+        image: webSocket,
+        description:
+          "Protocol for real-time bidirectional event-based communication.",
+        level: 70,
+      },
+    ],
+  },
+  // ... other categories with updated descriptions and levels
+];
 
-We dive into codebases to trace the root cause of issues, using advanced debugging tools and systematic analysis. Whether it’s performance hiccups or broken functionality, we ensure your software stays reliable and user-friendly.`,
+export const extraTechnologies = [
+  {
+    title: "Mobile Development",
+    technologies: [
+      {
+        id: 11,
+        name: "React Native",
+        image: reactNative,
+        description: "Framework for building native mobile apps using React.",
+        level: 80,
+      },
+    ],
+  },
+  {
+    title: "UI/UX Design",
+    technologies: [
+      {
+        id: 12,
+        name: "Figma",
+        image: figma,
+        description:
+          "Collaborative interface design tool with prototyping features.",
+        level: 75,
+      },
+    ],
   },
 ];

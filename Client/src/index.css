@@ -118,3 +118,24 @@ body {
 .modal-carousel .carousel .control-arrow:hover {
   background-color: #05acb5d8 !important;
 }
+
+.custom-shape-divider-bottom-1744631684 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1744631684 svg {
+  position: relative;
+  display: block;
+  width: calc(113% + 1.3px);
+  height: 108px;
+}
+
+.custom-shape-divider-bottom-1744631684 .shape-fill {
+  fill: #121212;
+}
