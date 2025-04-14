@@ -2,9 +2,9 @@ function About() {
   return (
     <section className='bg-background text-text min-h-screen flex flex-col items-center px-6 py-12'>
       <div className='max-w-5xl w-full text-center'>
-        <h1 className='text-4xl font-bold text-primary mb-6'>About Innovexa</h1>
+        <h1 className='text-4xl font-bold text-primary mb-6'>About vexacode</h1>
         <p className='text-lg text-secondary mb-8'>
-          Innovexa is a cutting-edge software development company dedicated to
+          vexacode is a cutting-edge software development company dedicated to
           building innovative and scalable digital solutions. Our expertise lies
           in **web development, mobile app development, and UI/UX design**.
         </p>

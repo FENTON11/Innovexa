@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className='space-y-4'>
             <h2 className='text-2xl font-bold text-white'>
-              <span className='bg-app'>Inovexa</span>
+              <span className='bg-app'>VEXACODE</span>
             </h2>
             <p className='text-sm leading-relaxed'>
               Pioneering the future of enterprise technology solutions.
@@ -139,7 +139,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className='border-t border-gray-800 mt-12 pt-8 text-center'>
           <p className='text-sm text-gray-500'>
-            © {new Date().getFullYear()} Inovexa Technologies. All rights
+            © 2024-{new Date().getFullYear()} VEXACODE Technologies. All rights
             reserved.
           </p>
           <p className='text-xs text-gray-600 mt-2'>

@@ -9,8 +9,11 @@ function Navbar() {
     <nav className='bg-background text-text py-4 px-6 shadow-lg overflow-x-hidden'>
       <div className='max-w-6xl mx-auto flex justify-between items-center'>
         {/* Logo */}
-        <Link to='/' className='text-2xl font-bold text-primary'>
-          INNOVEXA
+        <Link
+          to='/'
+          className='text-3xl font-bold text-primary flex gap-4 items-center'
+        >
+          VEXACODE
         </Link>
 
         {/* Desktop Navigation */}

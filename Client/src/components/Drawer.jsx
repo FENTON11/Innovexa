@@ -35,7 +35,7 @@ const Drawer = ({ setOpen, open }) => {
         href='/'
         className='text-2xl font-bold text-primary hover:text-highlight'
       >
-        INNOVEXA
+        VEXACODE
       </Link>
       <li className=' list-none flex items-center gap-2 group'>
         <FaHome className=' group-hover:text-highlight text-xl' />
@@ -99,7 +99,7 @@ const Drawer = ({ setOpen, open }) => {
       </li>
 
       <p className=' pacifico-regular text-text_main'>
-        &copy; {new Date().getFullYear()} innovexa.
+        &copy; {new Date().getFullYear()} vexacode.
       </p>
       <p className=' pacifico-regular text-text_main'>All rights reserved.</p>
     </motion.div>

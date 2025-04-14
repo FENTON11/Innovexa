@@ -42,7 +42,7 @@ const TechnologyProgress = ({ level }) => (
 
 const TechnologiesSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref);
 
   return (
     <section id='technologies' ref={ref} className='py-20 relative '>
