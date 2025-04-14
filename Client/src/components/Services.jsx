@@ -35,7 +35,7 @@ function Services() {
                   <div>
                     <img
                       src={service.image}
-                      className=' w-full h-40 rounded-2xl object-cover shadow-2xl'
+                      className=' w-full h-40 rounded-2xl object-cover shadow-2xl bg-white'
                       alt=''
                     />
                   </div>

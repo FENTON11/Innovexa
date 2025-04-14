@@ -31,6 +31,12 @@ import { IoMdBug } from "react-icons/io";
 import { FaServer } from "react-icons/fa";
 import { TbTestPipe } from "react-icons/tb";
 import ui from "../assets/ui.jpg";
+import front from "../assets/front.jpg";
+import seo from "../assets/seo.jpg";
+import hybrid from "../assets/hybrid.png";
+import test from "../assets/test.png";
+import mobile from "../assets/mobile.jpg";
+import backend from "../assets/backend.png";
 import infernovideo from "../assets/inferno.mp4";
 import inferno1 from "../assets/inferno-1.png";
 import inferno2 from "../assets/inferno-2.png";
@@ -291,7 +297,7 @@ export const services = [
   {
     id: 1,
     icon: FaMobileAlt,
-    image: ui,
+    image: mobile,
     title: "Android App Development",
     description:
       "We build fast, scalable Android apps tailored to your business goals, offering seamless user experiences across all devices.",
@@ -299,7 +305,7 @@ export const services = [
   {
     id: 2,
     icon: FaMobileAlt,
-    image: ui,
+    image: hybrid,
     title: "Hybrid Mobile App Development",
     description:
       "Cross-platform apps with native feel — one codebase, multiple platforms. Save time, cut costs, and launch faster.",
@@ -315,7 +321,7 @@ export const services = [
   {
     id: 4,
     icon: FaLaptopCode,
-    image: ui,
+    image: front,
     title: "Front End Development",
     description:
       "Responsive, modern web interfaces built with the latest tech to ensure high performance and a smooth user journey.",
@@ -323,7 +329,7 @@ export const services = [
   {
     id: 5,
     icon: FaServer,
-    image: ui,
+    image: backend,
     title: "Backend Development",
     description:
       "Scalable, secure server-side logic and API development to power fast, reliable, and data-driven applications.",
@@ -331,7 +337,7 @@ export const services = [
   {
     id: 6,
     icon: TbTestPipe,
-    image: ui,
+    image: test,
     title: "Unit Testing",
     description:
       "Reliable code through automated unit testing. We prevent bugs early and ensure long-term code stability and quality.",
@@ -339,7 +345,7 @@ export const services = [
   {
     id: 7,
     icon: TbSeo,
-    image: ui,
+    image: seo,
     title: "SEO Optimization",
     description:
       "Boost your visibility with smart SEO strategies. We help your site rank higher and attract organic traffic efficiently.",
@@ -448,7 +454,6 @@ export const technologies = [
       },
     ],
   },
-  // ... other categories with updated descriptions and levels
 ];
 
 export const extraTechnologies = [
