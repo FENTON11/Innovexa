@@ -3,6 +3,8 @@ import { portfolios } from "../data";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState } from "react";
+import { FaExpand } from "react-icons/fa";
+import { MdClose } from "react-icons/md";
 
 const varients = {
   initial: { y: 300, opacity: 0 },
@@ -17,7 +19,7 @@ const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPortfolioImages, setSelectedPortfolioImages] = useState([]);
 
-  const handleCarouselClick = (media) => {
+  const handleExpandClick = (media) => {
     setSelectedPortfolioImages(media);
     setIsModalOpen(true);
   };
@@ -29,15 +31,17 @@ const Portfolio = () => {
           key={index}
           src={mediaItem.src}
           alt={`Portfolio Image ${index + 1}`}
-          className='w-full h-full object-contain md:object-cover rounded-md'
+          className='w-full max-h-[70vh] object-contain rounded-md mx-auto'
         />
       );
     } else if (mediaItem.type === "video") {
       return (
         <video
           key={index}
-          controls
-          className='w-full h-full object-cover rounded-md'
+          autoPlay
+          loop
+          muted
+          className='w-full max-h-[70vh] object-contain rounded-md bg-white mx-auto'
         >
           <source src={mediaItem.src} type='video/mp4' />
           Your browser does not support the video tag.
@@ -52,7 +56,7 @@ const Portfolio = () => {
         {portfolios.map((item) => (
           <section
             key={item.id}
-            className='flex gap-2 items-center overflow-hidden md:min-h-[90vh]'
+            className='flex gap-2 items-center overflow-hidden'
           >
             <motion.div
               variants={varients}
@@ -61,10 +65,7 @@ const Portfolio = () => {
               className='container mx-auto px-4'
             >
               <div className='flex flex-col md:flex-row items-center justify-center gap-12'>
-                <div
-                  className='flex-1 h-[50%] overflow-hidden md:p-4'
-                  onClick={() => handleCarouselClick(item.media)}
-                >
+                <div className='flex-1 h-[50%] overflow-hidden md:p-4 relative'>
                   <Carousel
                     infiniteLoop
                     autoPlay
@@ -75,6 +76,13 @@ const Portfolio = () => {
                       renderMedia(mediaItem, index)
                     )}
                   </Carousel>
+                  {/* Expand icon button */}
+                  <button
+                    onClick={() => handleExpandClick(item.media)}
+                    className='hidden md:block absolute bottom-8 right-6 z-10 p-2 bg-white text-highlight shadow-2xl rounded-full cursor-pointer'
+                  >
+                    <FaExpand size={24} />
+                  </button>
                 </div>
                 <motion.div
                   variants={varients}
@@ -97,7 +105,7 @@ const Portfolio = () => {
                   </motion.h1>
                   <motion.div
                     variants={varients}
-                    className='flex justify-between gap-4 items-start'
+                    className='flex justify-between gap-4 items-start flex-col md:flex-row'
                   >
                     <motion.div
                       variants={varients}
@@ -120,8 +128,9 @@ const Portfolio = () => {
                         variants={varients}
                         href={item.link}
                         target='_blank'
+                        className=' flex-1'
                       >
-                        <motion.button className='bg-primary text-white rounded-lg py-2 px-8 cursor-pointer transition-all hover:bg-highlight duration-150 hover:scale-105'>
+                        <motion.button className='bg-primary text-white rounded-lg py-2 px-8 cursor-pointer transition-all hover:bg-highlight duration-150 hover:scale-105 '>
                           See Demo
                         </motion.button>
                       </motion.a>
@@ -140,20 +149,22 @@ const Portfolio = () => {
           </section>
         ))}
       </div>
+
+      {/* Modal */}
       {isModalOpen && (
         <div
-          className='fixed inset-0 bg-black/25 bg-opacity-90 z-50 flex items-center gap-4 justify-center p-4'
+          className='fixed inset-0 bg-black/25 bg-opacity-90 z-50 md:flex items-center justify-center p-4 hidden '
           onClick={() => setIsModalOpen(false)}
         >
           <div
-            className='relative max-w-[1000px] bg-white p-4 rounded-lg w-full'
+            className='relative max-w-[1000px] w-full h-[80vh] bg-white p-4 rounded-lg overflow-y-auto'
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className='absolute -top-10 cursor-pointer right-0 text-white text-4xl z-50 hover:text-gray-300'
+              className='absolute top-0 right-0 text-white text-4xl z-50 hover:text-gray-300 cursor-pointer bg-primary'
               onClick={() => setIsModalOpen(false)}
             >
-              &times;
+              <MdClose />
             </button>
             <Carousel
               infiniteLoop
@@ -161,9 +172,14 @@ const Portfolio = () => {
               className='w-full h-full modal-carousel'
               selectedItem={0}
             >
-              {selectedPortfolioImages.map((mediaItem, index) =>
-                renderMedia(mediaItem, index)
-              )}
+              {selectedPortfolioImages.map((mediaItem, index) => (
+                <div
+                  key={index}
+                  className='flex items-center justify-center w-full h-[70vh] overflow-hidden'
+                >
+                  {renderMedia(mediaItem, index)}
+                </div>
+              ))}
             </Carousel>
           </div>
         </div>

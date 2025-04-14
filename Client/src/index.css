@@ -111,12 +111,12 @@ body {
 }
 
 .modal-carousel .carousel .control-arrow {
-  background-color: var(--color-highlight) !important;
+  background-color: #0c6d72d8 !important;
   margin-top: auto;
 }
 
 .modal-carousel .carousel .control-arrow:hover {
-  background-color: #05acb5d8 !important;
+  background-color: #068b92d8 !important;
 }
 
 .custom-shape-divider-bottom-1744631684 {
