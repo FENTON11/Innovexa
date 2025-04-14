@@ -38,6 +38,7 @@ function Services() {
                 </div>
                 <div className=' absolute h-full z-50 bg-primary w-[.2rem] cursor-pointer group-hover:bg-highlight'></div>
               </div>
+              <div className='flex-1 p-4 hidden md:block' />
             </div>
           ))}
         </div>

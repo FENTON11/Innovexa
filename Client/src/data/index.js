@@ -183,56 +183,64 @@ export const services = [
     id: 1,
     icon: FaMobileAlt,
     title: "Android App Development",
-    description:
-      "Craft seamless, high-performance Android apps tailored to your unique needs. From concept to launch, we bring your ideas to life on the world's most popular mobile platform.",
+    description: `We specialize in building robust and responsive Android applications tailored to your business needs. From sleek interfaces to efficient performance, our development process ensures that your app is optimized for both speed and scalability on Android devices.
+
+Whether you're launching a brand-new idea or revamping an existing app, we provide end-to-end development — from planning and UI/UX design to deployment and maintenance. We ensure compatibility across devices and adhere to best practices to deliver a seamless user experience.`,
   },
   {
     id: 2,
     icon: FaMobileAlt,
     title: "Hybrid Mobile App Development",
-    description:
-      "Build once, deploy everywhere. Our hybrid apps offer cross-platform compatibility and a native-like experience, saving you time and resources.",
+    description: `Our hybrid app development services allow you to launch your product across multiple platforms with a single codebase. Using modern frameworks, we create apps that feel and perform like native apps on both Android and iOS.
+
+This cross-platform approach saves time and reduces development costs while ensuring a consistent user experience. Whether you're targeting broad user bases or need quick market entry, our hybrid solutions offer the flexibility and efficiency you need.`,
   },
   {
     id: 3,
     icon: FaBrush,
     title: "UI/UX Design",
-    description:
-      "Create stunning, user-centric designs that captivate and engage. Our UI/UX experts ensure your app or website is intuitive, beautiful, and a joy to use.",
+    description: `Design is more than just aesthetics — it’s about creating intuitive, enjoyable experiences. Our UI/UX design team crafts interfaces that are not only visually appealing but also user-focused and functional.
+
+We conduct thorough research to understand your users’ behavior and pain points, allowing us to design wireframes and prototypes that truly connect with your audience. The result is a smooth, engaging experience that drives retention and satisfaction.`,
   },
   {
     id: 4,
     icon: FaLaptopCode,
     title: "Front End Development",
-    description:
-      "Transform your designs into responsive, interactive web experiences. We use the latest technologies to deliver fast, visually appealing front-end solutions.",
+    description: `We bring your designs to life through clean, responsive, and interactive front-end development. Our team leverages modern frameworks and technologies like React to ensure fast performance and a seamless user experience.
+
+From landing pages to complex dashboards, we prioritize accessibility, scalability, and maintainability. Whether you need animations, API integration, or component-based architecture, we deliver front-end solutions that work beautifully across devices.`,
   },
   {
     id: 5,
     icon: FaServer,
     title: "Backend End Development",
-    description:
-      "Power your applications with robust, scalable backend solutions. Our experts handle databases, servers, and APIs to ensure smooth, reliable performance.",
+    description: `A powerful backend is the foundation of any high-performing app. We build secure, scalable, and maintainable server-side solutions that handle everything from data storage to user authentication and real-time features.
+
+Whether it's RESTful APIs or complex business logic, our backend development ensures your application runs smoothly and efficiently. We use technologies like Node.js, Express, and MongoDB to provide fast and reliable infrastructure for your digital products.`,
   },
   {
     id: 6,
     icon: TbTestPipe,
     title: "Unit Testing",
-    description:
-      "Ensure your software is bug-free and reliable with comprehensive unit testing. We identify and fix issues early, saving you time and money.",
+    description: `Our unit testing services ensure that your application’s codebase remains stable, reliable, and easy to maintain. By testing components in isolation, we catch issues early in development before they become costly bugs.
+
+We use industry-standard testing frameworks and tools to automate testing processes, increase coverage, and support CI/CD workflows. This proactive approach saves time in the long run and results in more robust, error-free software.`,
   },
   {
     id: 7,
     icon: TbSeo,
     title: "SEO Optimization",
-    description:
-      "Boost your online visibility and drive organic traffic with expert SEO strategies. We optimize your content and structure to rank higher on search engines.",
+    description: `Visibility is everything in today’s digital landscape. Our SEO optimization services help your website rank higher on search engines by improving technical performance, content relevance, and keyword targeting.
+
+We conduct in-depth audits, implement on-page and off-page strategies, and continuously monitor results. Whether you're a local business or global brand, we help drive organic traffic and increase your reach online.`,
   },
   {
     id: 8,
     icon: IoMdBug,
     title: "Bug Fixing and Debugging",
-    description:
-      "Keep your software running smoothly with our expert bug fixing and debugging services. We quickly identify and resolve issues to minimize downtime.",
+    description: `Even the best software can run into issues. Our bug fixing and debugging services are designed to quickly identify, diagnose, and resolve errors in your application to keep it running smoothly.
+
+We dive into codebases to trace the root cause of issues, using advanced debugging tools and systematic analysis. Whether it’s performance hiccups or broken functionality, we ensure your software stays reliable and user-friendly.`,
   },
 ];
