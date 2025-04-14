@@ -3,42 +3,56 @@ import { portfolios } from "../data";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState } from "react";
+
 const varients = {
-  initial: {
-    y: 300,
-    opacity: 0,
-  },
+  initial: { y: 300, opacity: 0 },
   animate: {
     y: 0,
     opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
+    transition: { duration: 1, staggerChildren: 0.1 },
   },
 };
+
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPortfolioImages, setSelectedPortfolioImages] = useState([]);
 
-  const handleCarouselClick = (images) => {
-    setSelectedPortfolioImages(images);
+  const handleCarouselClick = (media) => {
+    setSelectedPortfolioImages(media);
     setIsModalOpen(true);
   };
+
+  const renderMedia = (mediaItem, index) => {
+    if (mediaItem.type === "image") {
+      return (
+        <img
+          key={index}
+          src={mediaItem.src}
+          alt={`Portfolio Image ${index + 1}`}
+          className='w-full h-full object-contain md:object-cover rounded-md'
+        />
+      );
+    } else if (mediaItem.type === "video") {
+      return (
+        <video
+          key={index}
+          controls
+          className='w-full h-full object-cover rounded-md'
+        >
+          <source src={mediaItem.src} type='video/mp4' />
+          Your browser does not support the video tag.
+        </video>
+      );
+    }
+  };
+
   return (
     <div className='relative'>
-      {/* Progress Bar */}
-      {/* <div className='sticky top-0 left-0 pt-12 text-center text-orange-500 text-3xl md:text-xl bg-gray-800 w-full z-10'>
-        <h1>Featured Works</h1>
-        <div className='progressBar h-2 bg-white mt-4 w-full'></div>
-      </div> */}
-
-      {/* Portfolio Items */}
-      <div className='mt-24 md:mt-7 mb-10  flex flex-col gap-4'>
+      <div className='mt-24 md:mt-7 mb-10 flex flex-col gap-4'>
         {portfolios.map((item) => (
           <section
             key={item.id}
-            className=' flex gap-2 items-center overflow-hidden md:min-h-[90vh]'
+            className='flex gap-2 items-center overflow-hidden md:min-h-[90vh]'
           >
             <motion.div
               variants={varients}
@@ -49,22 +63,17 @@ const Portfolio = () => {
               <div className='flex flex-col md:flex-row items-center justify-center gap-12'>
                 <div
                   className='flex-1 h-[50%] overflow-hidden md:p-4'
-                  onClick={() => handleCarouselClick(item.images)}
+                  onClick={() => handleCarouselClick(item.media)}
                 >
                   <Carousel
                     infiniteLoop
                     autoPlay
                     showThumbs={false}
-                    className=' w-full h-full'
+                    className='w-full h-full'
                   >
-                    {item.images.map((img, index) => (
-                      <img
-                        key={index}
-                        src={img}
-                        alt={item.title}
-                        className='w-full h-full object-contain md:object-cover rounded-md'
-                      />
-                    ))}
+                    {item.media.map((mediaItem, index) =>
+                      renderMedia(mediaItem, index)
+                    )}
                   </Carousel>
                 </div>
                 <motion.div
@@ -73,7 +82,7 @@ const Portfolio = () => {
                 >
                   <motion.h2
                     variants={varients}
-                    className=' text-2xl sm:text-3xl font-bold xl:text-4xl text-center md:text-left bg-app capitalize'
+                    className='text-2xl sm:text-3xl font-bold xl:text-4xl text-center md:text-left bg-app capitalize'
                   >
                     {item.title}
                   </motion.h2>
@@ -83,7 +92,7 @@ const Portfolio = () => {
                   >
                     {item.desc}
                   </motion.p>
-                  <motion.h1 variants={varients} className=' font-bold bg-app'>
+                  <motion.h1 variants={varients} className='font-bold bg-app'>
                     Technologies
                   </motion.h1>
                   <motion.div
@@ -94,20 +103,15 @@ const Portfolio = () => {
                       variants={varients}
                       className='flex gap-4 items-center flex-wrap'
                     >
-                      {item.technologies.map((item, index) => (
+                      {item.technologies.map((tech, index) => (
                         <motion.div variants={varients} key={index}>
-                          {/* <Tooltip
-                              arrow
-                              title={item.name}
-                            > */}
                           <img
-                            alt={item.name}
-                            src={item.image}
+                            alt={tech.name}
+                            src={tech.image}
                             width={20}
                             height={20}
-                            className=' object-cover rounded-full cursor-pointer'
+                            className='object-cover rounded-full cursor-pointer'
                           />
-                          {/* </Tooltip> */}
                         </motion.div>
                       ))}
                     </motion.div>
@@ -117,34 +121,18 @@ const Portfolio = () => {
                         href={item.link}
                         target='_blank'
                       >
-                        <motion.button className='bg-primary text-white rounded-lg py-2 px-8  cursor-pointer transition-all hover:bg-highlight duration-150 hover:scale-105'>
+                        <motion.button className='bg-primary text-white rounded-lg py-2 px-8 cursor-pointer transition-all hover:bg-highlight duration-150 hover:scale-105'>
                           See Demo
                         </motion.button>
                       </motion.a>
                     ) : (
                       <motion.button
                         variants={varients}
-                        className='bg-gray-500 text-white rounded-lg py-2 px-8  cursor-not-allowed'
+                        className='bg-gray-500 text-white rounded-lg py-2 px-8 cursor-not-allowed'
                       >
                         under development
                       </motion.button>
                     )}
-                  </motion.div>
-                  <motion.div
-                    variants={varients}
-                    className='flex items-center justify-between'
-                  >
-                    {/* <motion.div variants={varients}>
-                      {item.showGithub ? (
-                        <button>
-                          <FaGithub className=' text-4xl  text-text_main' />
-                        </button>
-                      ) : (
-                        <div className=' line-through  p-2'>
-                          <FaGithub />
-                        </div>
-                      )}
-                    </motion.div> */}
                   </motion.div>
                 </motion.div>
               </div>
@@ -173,14 +161,9 @@ const Portfolio = () => {
               className='w-full h-full modal-carousel'
               selectedItem={0}
             >
-              {selectedPortfolioImages.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  className='w-full h-[80vh] object-cover'
-                  alt={`Enlarged view ${index + 1}`}
-                />
-              ))}
+              {selectedPortfolioImages.map((mediaItem, index) =>
+                renderMedia(mediaItem, index)
+              )}
             </Carousel>
           </div>
         </div>

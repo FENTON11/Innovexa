@@ -36,12 +36,17 @@ import { IoMdBug } from "react-icons/io";
 import { FaServer } from "react-icons/fa";
 import { TbTestPipe } from "react-icons/tb";
 import ui from "../assets/ui.jpg";
+import infernovideo from "../assets/inferno.mp4";
 
 export const portfolios = [
   {
     id: 1,
     title: "Excellent health care app ",
-    images: [excellent, digitech, eden],
+    media: [
+      { type: "image", src: excellent },
+      { type: "video", src: infernovideo }, // New video entry
+      { type: "image", src: digitech },
+    ],
     link: "https://excellent-health-care.vercel.app",
     completed: true,
     desc: "Excellent Health Care is a comprehensive training system designed to enhance the skills and knowledge of healthcare professionals. It focuses on delivering high-quality education in areas such as patient care, medical procedures, healthcare management, and communication. The system aims to improve the effectiveness of healthcare delivery by offering both theoretical and practical learning experiences, ensuring that practitioners are well-equipped to meet the demands of modern healthcare environments.",
@@ -75,7 +80,11 @@ export const portfolios = [
   {
     id: 2,
     title: "digitech E-ccomerce app",
-    images: [digitech, excellent, digitech, eden],
+    media: [
+      { type: "image", src: excellent },
+      { type: "video", src: infernovideo }, // New video entry
+      { type: "image", src: digitech },
+    ],
     completed: true,
     link: "https://digitech-plum.vercel.app",
     desc: "DigiTech is a sleek and easy-to-navigate eCommerce app specializing in electronics. It offers a wide range of the latest gadgets, from smartphones and laptops to home appliances and accessories. With secure payment options, fast delivery, and competitive pricing, DigiTech makes shopping for high-quality electronics convenient and reliable, all from the palm of your hand.",
@@ -109,7 +118,11 @@ export const portfolios = [
   {
     id: 4,
     title: "fresh grub food app",
-    images: [freshGrub, excellent, digitech, eden],
+    media: [
+      { type: "image", src: excellent },
+      { type: "video", src: infernovideo }, // New video entry
+      { type: "image", src: digitech },
+    ],
     completed: true,
     link: "https://fresh-grub-kenya.onrender.com",
     desc: " Fresh Grub Kenya is a user-friendly food delivery app that connects customers with local restaurants and food vendors across Kenya. The app offers a wide variety of fresh, delicious meals, allowing users to browse menus, place orders, and have food delivered right to their doorstep. With a focus on convenience and quality, Fresh Grub Kenya provides a seamless and reliable way for people to enjoy tasty meals from their favorite eateries.",
@@ -139,7 +152,11 @@ export const portfolios = [
   {
     id: 7,
     title: "Eden- real estate app",
-    images: [eden, excellent, digitech, eden],
+    media: [
+      { type: "image", src: excellent },
+      { type: "video", src: infernovideo }, // New video entry
+      { type: "image", src: digitech },
+    ],
     completed: true,
     link: "https://eden-estate-front.onrender.com",
     desc: "Eden is a comprehensive real estate app that simplifies the process of buying, selling, and renting properties. With an intuitive interface, Eden allows users to browse listings, view detailed property information, and connect directly with agents or sellers. Whether you're looking for a new home, office space, or investment opportunity, Eden offers a seamless experience to help you find your ideal property.",
