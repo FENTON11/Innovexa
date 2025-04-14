@@ -1,7 +1,5 @@
 // import "./App.css";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
 import Team from "./components/Team";
 import Portfolio from "./components/Portfolio";
 import About from "./components/About ";
@@ -10,14 +8,14 @@ import Quote from "./components/Quote";
 import ChatAssistant from "./components/ChatAssistant";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Hero />} />
-        <Route path='/services' element={<Services />} />
+        <Route path='/' element={<Home />} />
         <Route path='/team' element={<Team />} />
         <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/about' element={<About />} />
